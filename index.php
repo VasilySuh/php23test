@@ -25,7 +25,7 @@ $totalPages = ceil($totalMessages / $limit);
         <?php foreach ($messages as $message): ?>
             <li>
                 <a href="view_message.php?id=<?= $message['id'] ?>"><?= htmlspecialchars($message['title']) ?></a>
-                <p><?= htmlspecialchars($message['summary']) ?></p>
+                <p><?= htmlspecialchars($message['short_content']) ?></p>
             </li>
         <?php endforeach; ?>
     </ul>
