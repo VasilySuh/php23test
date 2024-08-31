@@ -13,13 +13,16 @@ $comments = $stmt->fetchAll();
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($message['title']) ?></title>
 </head>
+
 <body>
+    <a href="../phptest23/"></a>
     <h1><?= htmlspecialchars($message['title']) ?></h1>
-    <p><?= htmlspecialchars($message['content']) ?></p>
+    <p><?= htmlspecialchars($message['full_content']) ?></p>
 
     <h2>Комментарии</h2>
     <ul>
@@ -30,4 +33,5 @@ $comments = $stmt->fetchAll();
 
     <a href="add_comment.php?message_id=<?= $messageId ?>">Добавить комментарий</a>
 </body>
+
 </html>
